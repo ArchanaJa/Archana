@@ -1,0 +1,84 @@
+
+
+/*---------------------------------------------------------------------
+                 MOBILE DEVICES STYLES
+---------------------------------------------------------------------*/
+
+
+@media screen and (max-width:480px) {
+    
+    .bgImage div:not(:first-child):not(.actionB), .menu-items, .shoppingB {
+        
+        display: none;
+    }
+    
+    .navBtn {
+        
+        font-size: 2.5em;
+        display: block;
+        width: 12%;
+        margin: 0 2vw 0 75vw;
+        padding: 0 10px !important;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .menu-items li {
+        
+        border-top: 3px solid rgba(0, 0, 0, 0.3);
+    }
+    
+    .menu-items a {
+        
+        padding: 15px 0 15px 20px;
+    }
+    
+    .navC, nav li a, nav li {
+        
+        color: white;
+        opacity: 1;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+        float: none;
+        display: block;
+        outline-style: none !important;
+    }
+    
+    li.mainNav.viewCart {
+         
+        background-color: transparent;
+        border: none;
+    }
+    
+    .navC {
+        
+        background-image: url(../img/extraSmallLogoNew.png);
+        background-repeat: no-repeat;
+        background-position: 10px -10px;
+        
+        
+        }
+        
+    .actionB {
+        
+        Top: 60vh;
+        Left: 10vw;
+        background-color: rgba(54, 91, 70, 0.8);
+        border-radius: 5px;
+    }
+    
+    .newCollectionB {
+        
+        color: white;
+        font-weight: bold;
+    }
+    
+    .featuredP{
+        column-count: 1;
+        display: block;
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,943 @@
+/*---------------------------------------------------------------------
+            THE VINTAGE APPAREL COMPANY CSS STYLE FILE
+---------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------
+                        WEBSITE COLOUR SCHEME
+---------------------------------------------------------------------*/
+
+/*First colour: rgba(54, 91, 70, 1);
+Secondary colour: rgba(54, 91, 70, 0.9); - variations of opacity to the main colour
+Third colour: rgba(159, 12, 16, 1);
+Fourth colour: #444; for text and headings*/
+
+
+/*---------------------------------------------------------------------
+                        THE GLOBAL STYLES
+---------------------------------------------------------------------*/
+
+body {
+    
+    font-family: 'Ek Mukta', sans-serif;
+    font-size: 0.9em;
+    color: #444;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.containerFlex {
+    background-image: url(../img/vintage.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/vintage.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 10px 0 50px 0;
+    background-color: rgba(159, 12, 16, 0.2);
+    height: auto;
+    overflow: auto;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 100px auto;
+}
+
+ul {
+    
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+a[href^="tel:"], a[href^="mailto:"] {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+a[href^="tel:"]:hover, a[href^="mailto:"]:hover {
+    text-decoration: none;
+    color: rgba(159, 12, 16, 1);
+    transition: all 0.5s ease;
+}
+
+/*-------------------------------------*/
+
+
+/*Embeded fonts*/
+
+@font-face {
+    font-family: salesFont;
+    src: url(../embedFonts/HelsinkiXXL-Black.woff);
+}
+
+
+/*---------------------------------------------------------------------
+                        THE HOME STYLES
+---------------------------------------------------------------------*/
+
+
+.bgImage {
+    position: relative;
+    background-image: url(../img/prettyWoman.jpg);    
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    width: 100% !important;
+    height: 100vh;
+    border-bottom: 15px solid rgba(54, 91, 70, 0.8);
+    background-attachment: fixed;   
+}
+
+.logoC {
+
+    position: absolute;
+    top: 60px;
+    left: 200px;
+}
+
+/*Navigation styles*/
+
+.navC {
+    height: auto;
+    width: 51%;
+    background-color: rgba(54, 91, 70, 0.9);
+    padding: 10px 0 10px 49%;
+    position: fixed;
+    z-index: 1000;
+}
+
+nav a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.5s ease;
+}
+
+.current > a {  
+    color: rgba(255, 255, 255, 1); !important;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    transition: all 1s ease;
+}
+
+nav a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+nav li {
+    display: inline;
+    padding: 0 10px 0 0;
+}
+
+.viewCart {
+    margin-left: 30px;
+    display: inline;
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    text-transform: lowercase !important;
+}
+
+.viewCart a {
+    text-transform: lowercase;
+    font-weight: lighter;
+}
+
+.actionB {
+    position: absolute;
+    top: 70vh;
+    left: 225px; 
+}
+
+.newCollectionB {  
+    padding: 15px 20px;
+    line-height: 20px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 2px solid rgba(54, 91, 70, 0.6);
+    background-color: rgba(54, 91, 70, 0.3);
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: background-color 1000ms ease-out;
+    -moz-transition: background-color 1000ms ease-out;
+    -o-transition: background-color 1000ms ease-out;
+    -ms-transition: background-color 1000ms ease-out; 
+    transition: background-color 1000ms ease-out;
+    transition: all 0.5s ease;
+}
+
+.newCollectionB:hover {
+    border: 2px solid rgba(54, 91, 70, 1);
+    background-color: rgba(54, 91, 70, 0.8);
+    color: white;
+    -webkit-transition: background-color 1000ms ease-in;
+    -moz-transition: background-color 1000ms ease-in;
+    -o-transition: background-color 1000ms ease-in;
+    -ms-transition: background-color 1000ms ease-in; 
+    transition: background-color 1000ms ease-in;
+}
+
+.actionB:hover + .hand {
+
+    /*-webkit-animation: handPointer 1.5s linear infinite;
+    -moz-animation: handPointer 1.5s linear infinite; 
+    animation: handPointer 1.5s linear infinite;*/
+    
+    -webkit-animation: handPointer 2s ease 0s;
+    -webkit-animation-iteration-count:infinite;  
+    animation: handPointer 2s ease 0s; 
+    animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes handPointer {
+                                0%{left:30%;} 
+                                50%{left:40%;}     
+                                100%{left:30%;}
+                                }
+
+@keyframes handPointer {
+                        0%{left:30%;} 
+                        50%{left:40%;}     
+                        100%{left:30%;}
+                        }
+
+.hand {
+    
+    position: absolute;
+    top: 70vh;
+    left: 30%;
+    color: rgba(54, 91, 70, 0.8);
+    margin: 0 0 0 20px !important;
+}
+
+/*This styles below is for the little arrow down animation*/
+
+@-webkit-keyframes fadeInUp {
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+  }
+
+  from {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+  }
+
+  from {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.mouse {
+    position: absolute;
+    display: block;
+    top: 85%;
+    left: 50%;
+    width: 2px;
+    height: 6px;
+    margin: -30px 0 0 -1px;
+    background: white;
+    -webkit-animation: fadeInUp 2.5s linear infinite;
+    -moz-animation: fadeInUp 2.5s linear infinite;
+    animation: fadeInUp 2.5s linear infinite;
+    
+}
+
+.scrollD {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 45px;
+    margin: 0 auto 20px;
+    top: 90vh;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid rgba(54, 91, 70, 1);
+    background-color: rgba(54, 91, 70, 0.5);
+    background: -webkit-linear-gradient(rgba(54, 91, 70, 0.8), rgba(159, 12, 16, 0.5)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(54, 91, 70, 0.8), rgba(159, 12, 16, 0.5)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(54, 91, 70, 0.8), rgba(159, 12, 16, 0.5)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(54, 91, 70, 0.8), rgba(159, 12, 16, 0.5)); /* Standard syntax */
+    transition: all 0.5s ease;
+}
+
+.scrollD:hover {
+    
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.fa-arrow-down {   
+    color: white;
+    font-weight: lighter;
+}
+
+
+/*---------------------------------------------------------------------
+                        THE MODAL STYLES
+---------------------------------------------------------------------*/
+
+/* The Modal (background) */
+.modal {
+    color: white;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 65px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: rgba(49, 82, 63, 0.6);
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 0px;
+    left: 830px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 100;
+    text-shadow: 2px 1px red;  
+}
+
+.close:hover, .close:focus {
+    color: rgba(54, 91, 70, 0.5);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding-bottom: 30px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top:-300px;
+        opacity:0
+    } 
+    to {
+        top:0;
+        opacity:1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top:-300px;
+        opacity:0
+    }
+    to {
+        top:0;
+        opacity:1
+    }
+}
+
+/*---------------------------------------------------------------------
+                        THE FORM STYLES
+---------------------------------------------------------------------*/
+
+.theForm {
+    margin: 30px;
+    height: 280px;
+    overflow: auto;
+}
+
+.theFormL {
+    width: 40%;
+    height: 100%;
+    margin: 0 10% 0 5%;
+    float: left;
+}
+
+.theFormR {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.theFormR input, .theFormL input {
+    width: 90%;
+    background-color: transparent;
+    border: 1px solid white;
+    height: 30px;
+    color: white;
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+/*---------------------------------------------------------------------
+                        THE VIDEO STYLES
+---------------------------------------------------------------------*/
+
+.myVideo {
+    width: 100%;    
+}
+
+/*---------------------------------------------------------------------
+            SFEATURED PRODUCTS AND SALES STYLES
+---------------------------------------------------------------------*/
+
+.featuredPText {
+    
+    text-align: center;
+}
+
+.featuredP { 
+    width: 80%;
+    height: 100% !important;
+    margin: 0 auto;
+    padding: 20px 30px;
+    column-count: 3;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -ms-column-count: 3;
+    -o-column-count: 3;
+}
+
+.holdingC {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    overflow: auto;
+}
+
+.featuredPSales {   
+    width: 60%;
+    height: 100% !important;
+    margin: 0 auto 50px auto;
+    padding: 20px 30px;
+    float: left;
+    column-count: 3;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -ms-column-count: 3;
+    -o-column-count: 3;
+}
+
+.productBox {
+    position: relative;
+    display: block;
+    width: 90%;
+    text-align: center;
+    opacity: 1;
+    transform: translateX(40);
+    transition: all 0.5s ease-in-out;
+}
+
+.sales {
+    width: 80%;
+    height: 100%;
+    margin: 200px auto;
+    padding: 0 0 100px 0;
+    overflow: auto;
+}
+
+.productSales {
+    position: relative;
+    display: block;
+    width: 86%;
+    text-align: center;
+}
+
+.productSales img {
+    position: relative;
+    width: 100%;
+    border: 5px solid rgba(54, 91, 70, 0.1);
+}
+
+.shoppingB {
+    width: 96.5%;
+    margin: 20px 0 0 0;
+    border: 1px solid #ccc;
+    height: 100px;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+}
+
+.shoppingText {
+    font-family: salesFont;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-left: 20px;
+    float: none !important;
+}
+
+.deliveryO {
+    text-align: center;
+    width: 86.5%;
+    padding: 30px 5% 30px 5%;
+    border: 1px solid #ccc;
+}
+
+figcaption:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "ADD TO CART";
+    font-size: 0.9em;
+    font-weight: bold;
+    opacity: 0;
+    background-color: rgba(54, 91, 70, 0.2);
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.productBox img:hover ~ figcaption:before  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 5px;
+    content: "ADD TO CART";
+    font-size: 0.9em;
+    font-weight: bold;
+    opacity: 1;
+    background-color: rgba(54, 91, 70, 0.2);
+    border-radius: 0 0 0 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 0 0 0 3px;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.productBox img {
+    position: relative;
+    width: 100%;
+}
+
+.productBox a {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    cursor: pointer!important;
+    overflow: hidden !important;
+}
+
+.pDetail {  
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.pDetailSales {
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.productSales a {  
+    color: black;
+    text-decoration: none;
+}
+
+figcaption > strong.price {
+    display: block;
+}
+
+.myPriceList li {
+    list-style: none;
+    margin: 20px 0 10px 20px;
+}
+
+.register:after {
+    content: 'REGISTER';
+    color: white;
+    float: right;
+    font-size: 1em;
+    font-weight: lighter;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: rgba(159, 12, 16, 0.9);
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.register:hover:after {
+    background-color: rgba(54, 91, 70, 0.9);
+}
+
+.login, .register1 {
+    color: white;
+    font-size: 0.8em;
+    font-weight: lighter;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 16px;
+    border: none;
+    background-color: rgba(159, 12, 16, 0.9);
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+.login:hover, .register1:hover {
+    background-color: rgba(54, 91, 70, 0.9);
+}
+
+
+/*---------------------------------------------------------------------
+                    ABOUT PAGE STYLES
+---------------------------------------------------------------------*/
+
+.aboutText {
+    width: 30%;
+    float: left;
+    margin-left: 2%;
+    padding: 0 15px;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.videoC {
+    width: 60%;
+    float: left;
+    border: 5px solid rgba(159, 12, 16, 0.2);
+}
+
+
+/*---------------------------------------------------------------------
+            CONTACT FORM AND FOOTER STYLES
+---------------------------------------------------------------------*/
+
+.formC {
+    width: 96.5%;
+    margin: 0 0 150px 0;
+    display: block;
+}
+
+.contactD {
+    width: 36.3%;
+    float: left;
+    height: 288px;
+    margin-top: 25px;
+}
+
+.ourLocation {
+    width: 60%; 
+    float: left;
+    border: 5px solid rgba(159, 12, 16, 0.2);
+    height: 288px; 
+    margin-top: 25px;
+}
+
+  #map {
+    opacity: 0.5;  
+    height: 288px; 
+}
+
+.sendB {
+    font-size: 0.8em;
+    color: white;
+    line-height: 30px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 2px solid rgba(159, 12, 16, 0.6);
+    background-color: rgba(159, 12, 16, 0.5);
+    transition: all 0.5s ease;
+}
+
+.sendB:hover {
+    cursor: pointer;
+    border: 2px solid rgba(54, 91, 70, 0.6);
+    background-color: rgba(54, 91, 70, 0.5);
+}
+
+.socialMedia {
+    height: 30px;
+    text-align: center;
+    color: white;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.smLogo {
+    margin: 10px 20px;
+    color: rgba(159, 12, 16, 1);
+    transition: all 0.5s ease;
+}
+
+.smLogo:hover {
+    margin: 10px 20px;
+    color: rgba(159, 12, 16, 0.5);
+}
+
+.ourAddress {  
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footerD {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-weight: lighter;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.inputFields {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 89.5%;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    height: 60px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: lighter;
+    padding: 0 5%;
+}
+
+.inputMessage {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 89.5%;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    height: auto;
+    color: white;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding: 20px 5%;
+}
+
+.formC label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+footer {  
+    background-color: black;
+    clear: both;
+    margin: 0 auto;
+}
+
+.red {
+    color: red;
+}
+
+.navBtn {  
+    display: none;
+}
+
+
+
+/*---------------------------------------------------------------------
+                 MOBILE DEVICES STYLES
+---------------------------------------------------------------------*/
+
+
+@media screen and (max-width:480px) {
+    
+    .bgImage div:not(:first-child):not(.actionB), .menu-items, .shoppingB {
+        
+        display: none;
+    }
+    
+    .navBtn {
+        
+        font-size: 2.5em;
+        display: block;
+        width: 12%;
+        margin: 0 2vw 0 75vw;
+        padding: 0 10px !important;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .menu-items li {
+        
+        border-top: 3px solid rgba(0, 0, 0, 0.3);
+    }
+    
+    .menu-items a {
+        
+        padding: 15px 0 15px 20px;
+    }
+    
+    .navC, nav li a, nav li {
+        
+        color: white;
+        opacity: 1;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+        float: none;
+        display: block;
+        outline-style: none !important;
+    }
+    
+    li.mainNav.viewCart {
+         
+        background-color: transparent;
+        border: none;
+    }
+    
+    .navC {
+        
+        background-image: url(../img/extraSmallLogoNew.png);
+        background-repeat: no-repeat;
+        background-position: 10px -10px;
+        
+        
+        }
+        
+    .actionB {
+        
+        Top: 60vh;
+        Left: 10vw;
+        background-color: rgba(54, 91, 70, 0.8);
+        border-radius: 5px;
+    }
+    
+    .newCollectionB {
+        
+        color: white;
+        font-weight: bold;
+    }
+    
+    .featuredP{
+        column-count: 1;
+        display: block;
+        width: 100%;
+    }
+    
+    .container{
+        margin:auto;
+    }
+    .productSales{
+        margin-bottom: 25px;
+    }
+    .holdingC{
+        width: 100%;
+        padding-left: 0px;
+        font-size: 1.2em;
+        overflow: hidden;
+    }
+    .deliveryO{
+        margin: auto;
+        padding: auto;
+    }
+    .deliveryO input{
+        margin-bottom: 10px;
+        margin-top: 5px;
+        width: 90%;
+        padding: 5px;
+    }
+    div.videoC{
+        
+        width: 100%;
+        clear: both;
+        padding: auto;
+        margin: auto;
+        display: block;
+    }
+    .aboutText{
+        margin-top: 50px;
+        width: 90%;
+        clear: both;
+        display: block;
+    }
+    .contactD{
+        width: 100%;
+        display: block;
+    }
+    .ourLocation{
+        width: 100%;
+        display: block;
+    }
+    .formC{
+        margin: 0 0 33px 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
