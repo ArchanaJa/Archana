@@ -1,0 +1,363 @@
+/*----------------------------------------------------------------------
+
+            The Apparel Vintage Company CSS Style flie
+
+-----------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------
+
+                        Website Colour Schem
+
+-----------------------------------------------------------------------*/
+
+
+
+/*  First colour: rgba(54,91,70,1);
+
+    Second colour: rgba(54,91,70,0.9);
+
+    Third colour: rgba(159,12,16,1);
+
+    Forth colour: #444;
+
+    font-family: 'Roboto', sans-serif;
+
+*/
+
+/*----------------------------------------------------------------------
+
+                        The Global Styles
+
+-----------------------------------------------------------------------*/
+
+
+
+body{
+
+    font-family: 'Ek Mukta', sans-serif;
+
+    font-size: 0.9em;
+
+    color: #444;
+
+    overflow-x: hidden;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.main{
+
+    width: 100%;
+
+    margin: 0 auto;
+
+}
+
+.container{
+
+    width: 80%;
+
+   /* background-color: red;*/
+
+    margin: auto;
+
+}
+
+/* img{
+
+    width:100%;
+
+}--*/
+
+/*----------------------------------------------------------------------
+
+                        The Home Styles
+
+-----------------------------------------------------------------------*/
+
+ul{
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.bgImage{
+
+    background-image: url("../HTML5/CaseStudy/images/vintageHome.jpg") ;
+
+    /*If you change the background-size to 100% value the backgroung image it will be responsive to the screen size.*/
+
+    background-size:100%;
+
+    position: relative;
+
+    background-repeat: no-repeat;
+
+    background-position: center 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background-attachment: fixed;
+
+        
+
+}
+
+.logo{
+
+    position: absolute;
+
+    top: 15vh;
+
+    left: 15vw;
+
+    
+
+}
+
+.actionB{
+
+    position: absolute;
+
+    top: 70vh;
+
+    left:17vw;
+
+    
+
+}
+
+.arrivals{
+
+    background-color: rgba(54, 91, 70, 0.6);
+    padding: 15px 20px;
+
+    line-height: 20px;
+
+    border-radius: 5px 5px 5px 5px;
+
+    -webkit-border-radius: 5px 5px 5px 5px;
+
+    -moz-border-radius: 5px 5px 5px 5px;
+
+    -o-border-radius: 5px 5px 5px 5px;
+
+    -ms-border-radius: 5px 5px 5px 5px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    border: 2px solid rgba(54, 91, 70, 1);
+}
+
+.arrivals:hover {
+
+    background-color: rgba(54, 91, 70, 0.4);
+
+}
+
+.arrivals:hover .hand{
+    left:40vw;
+}
+.buttonD{
+
+    position: absolute;
+
+    bottom: 10vh;
+
+    left:50vw;
+    
+}
+
+.scrollD{
+
+    
+
+    background-color: rgba(54, 91, 70, 0.6);
+
+    padding: 12px 17px;
+
+    line-height: 20px;
+
+    border-radius: 5px 5px 5px 5px;
+
+    -webkit-border-radius: 5px 5px 5px 5px;
+
+    -moz-border-radius: 5px 5px 5px 5px;
+
+    -o-border-radius: 5px 5px 5px 5px;
+
+    -ms-border-radius: 5px 5px 5px 5px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    border: 2px solid rgba(54, 91, 70, 1);
+
+}
+
+.navC{
+
+    width:100%;
+
+    height:auto;
+
+    background-color: rgba(54, 91, 70, 0.9);
+
+    position: fixed;
+
+    padding: 10px 0;
+
+}
+
+nav{
+
+    float:right;
+
+}
+
+nav li{
+
+    display: inline;
+
+    padding: 0 10px 0 0;  
+
+}
+
+nav a{
+
+   font-family: "Roboto", sans-serif;
+
+   font-size: 0.8em;
+
+    letter-spacing: :1px;
+
+    color: rgba(255,255,255,0.7);
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    padding: 10px 15px;
+
+    
+
+}
+
+nav a:hover{
+
+    color: rgba(255,255,255,1);
+
+}
+
+.hand{
+
+    position: absolute;
+
+    bottom: 25vh;
+
+    left:29vw;
+
+    color: rgba(54, 91, 70, 0.9);
+
+    transition: left .5s ease;
+
+}
+
+#viewicon{
+
+    padding: 8px 8px 8px 0;
+
+    
+
+    
+
+}
+
+.viewcart{
+
+     text-transform: lowercase;
+
+     background-color: rgba(41, 66, 52,1);
+
+   color: rgba(255,255,255,0.8);
+
+   padding: 0 8px;
+
+    -webkit-border-radius: 5px 5px 5px 5px;
+
+    -moz-border-radius: 5px 5px 5px 5px;
+
+    -o-border-radius: 5px 5px 5px 5px;
+
+    -ms-border-radius: 5px 5px 5px 5px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    border: 2px solid rgba(54, 91, 70, 1);
+
+    
+
+}
+
+.viewcart:hover{
+
+    color: rgba(255,255,255,1);
+
+  
+
+}
+
+
+
+section h1,h2,h3,p{
+
+    text-align: center;
+
+}
+
+.featureP{
+
+    column-count: 3; 
+
+    width:80%;
+    margin: auto;
+    position:relative;
+
+  /*  margin-right: 100px;*/
+
+}
+.fpImages{
+    padding: 8px;
+
+}
+
+.fpImages img {
+
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
+
+}
+
+figcaption{
+    text-align: center;
+    width: 90%;
+
+}
